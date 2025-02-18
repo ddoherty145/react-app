@@ -15,3 +15,9 @@
     width: 100%;
     height: auto;
 }
+
+.hours {
+    font-style:italic;
+    color: #555;
+    font-size: 0.9rem;
+}
