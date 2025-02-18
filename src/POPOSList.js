@@ -1,4 +1,7 @@
 import POPOSSpace from "./POPOSSpace";
+import './POPOSSpace.css';
+
+
 
 function POPOSList() {
   return (
@@ -33,6 +36,7 @@ function POPOSList() {
         address = "1 Sansome St."
         image = "images/citigroup-center.jpg"
         />
+
     </div>
   );
 }

@@ -1,5 +1,5 @@
 
-import log from './logo.svg'
+// import log from './logo.svg'
 
 function POPOSSpace(props) {
     const { name, image, address } = props
