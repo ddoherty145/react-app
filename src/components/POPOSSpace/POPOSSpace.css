@@ -1,23 +1,45 @@
-.POPOSList {
-    width: calc(100% - 80px);
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-}
-
+/* Make the component a positioning reference */
 .POPOSSpace {
-    width: 100%;
-    text-align: center;
-}
-
-.POPOSSpace > img {
+    position: relative;
+  }
+  
+  /* Make images flexible */
+  .POPOSSpace img {
     width: 100%;
     height: auto;
-}
-
-.hours {
-    font-style:italic;
-    color: #555;
-    font-size: 0.9rem;
-}
+  }
+  
+  /* Style the title link */
+  .POPOSSpace .POPOSSpace-title {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* Position the title at the top left */
+  .POPOSSpace h1 {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    font-weight: lighter;
+    background-color: rgba(255, 255, 255, 0.55);
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  /* Position address and hours in the bottom right */
+  .POPOSSpace .POPOSSpace-info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+  }
+  
+  /* Style address and hours with background */
+  .POPOSSpace .POPOSSpace-info div {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    background-color: rgba(255, 255, 255, 0.451);
+  }
+  

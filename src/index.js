@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import About from './About/About';
-import POPOSList from '../POPOSList';
-import POPOSDetails from './POPOSDetails/POPOSDetails'; // Import POPOSDetails
-import App from './App';
+import About from './components/About/About';
+import POPOSList from './components/POPOSList/POPOSList.js';
+import POPOSDetails from './components/POPOSDetails/POPOSDetails'; // Import POPOSDetails
+import App from './components/App';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
