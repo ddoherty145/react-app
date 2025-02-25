@@ -3,9 +3,8 @@ import {Outlet} from 'react-router-dom';
 import './App.css';
 import Title from './Title/Title';
 // import POPOSList from './POPOSList';
-import Footer from './Footer';
-import './Footer.css';
-import POPOSDetails from './POPOSDetails/POPOSDetails';
+import Footer from './Footer/Footer';
+import './Footer/Footer.css'
 
 function App() {
   return (
