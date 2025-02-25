@@ -1,7 +1,7 @@
 function Footer() {
     return (
       <footer className="Footer">
-        <p>David Doherty © {new Date().getFullYear()}</p>
+        <p>-David Doherty © {new Date().getFullYear()}</p>
         <nav>
         </nav>
       </footer>
