@@ -5,7 +5,7 @@ import About from './components/About/About';
 import POPOSList from './components/POPOSList/POPOSList.js';
 import POPOSDetails from './components/POPOSDetails/POPOSDetails'; // Import POPOSDetails
 import App from './components/App';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
