@@ -12,7 +12,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Title />
+        <main>
         <Outlet />
+        </main>
         <Footer />
         
       </header>
