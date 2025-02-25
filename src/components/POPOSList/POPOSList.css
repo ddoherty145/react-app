@@ -12,6 +12,39 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .POPOSList form {
+    display: flex;
+    justify-content: center; /* Center the form */
+    align-items: center;
+    width: 100%; /* Keep form width within container */
+    max-width: 400px; /* Restrict form width */
+    margin: 0 auto 20px auto; /* Center the form and add spacing */
+  }
+  
+  .POPOSList input {
+    width: 70%; /* Reduce input width */
+    padding: 0.4rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .POPOSList button {
+    padding: 0.4rem 0.8rem; /* Adjust button padding */
+    font-size: 1rem;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .POPOSList button:hover {
+    background-color: #555;
+  }
+  
+  
+
   /* Smaller screens and tablets */
 @media only screen and (max-width: 700px) {
     .POPOSList {

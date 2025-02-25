@@ -5,7 +5,7 @@ import './POPOSDetails.css';
 
 function POPOSDetails() {
   const { id } = useParams();
-  const space = data[Number(id)]; // Convert id to number
+  const space = data.find(space => space.id === parseInt(id));
 
   if (!space) {
     return <h2>Location not found</h2>; // Handle invalid IDs

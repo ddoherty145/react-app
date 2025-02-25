@@ -1,21 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import POPOSSpace from '../POPOSSpace/POPOSSpace';
 import './POPOSList.css';
-import data from '../../sfpopos-data.json';
+import data from '../../sfpopos-data.js'; // Use the new data file
 
 function POPOSList() {
-  const spaces = data.map(({ title, address, images, hours }, i) => (
-    <POPOSSpace
-      id={i}
-      key={title} // Unique key for each component
-      name={title}
-      address={address}
-      image={images[0]} // Using first image from the array
-      hours={hours} // Pass hours as a prop
-    />
-  ));
+  const [query, setQuery] = useState('');
 
-  return <div className="POPOSList">{spaces}</div>;
+  const spaces = data
+    .filter(({ title, address }) =>
+      title.toLowerCase().includes(query.toLowerCase()) || 
+      address.toLowerCase().includes(query.toLowerCase())
+    )
+    .map(({ id, title, address, images, hours }) => (
+      <POPOSSpace
+        id={id} // Uses `id` instead of index
+        key={`${title}-${id}`} // Ensures unique keys
+        name={title}
+        address={address}
+        image={images[0]} // Use the first image
+        hours={hours}
+      />
+    ));
+
+  return (
+    <div>
+      <form onSubmit={(e) => e.preventDefault()}>
+        <input
+          value={query}
+          placeholder="Search spaces..."
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button type="submit">Search</button>
+      </form>
+      <div className="POPOSList">
+      {spaces}
+    </div>
+    </div>
+  );
 }
 
 export default POPOSList;
